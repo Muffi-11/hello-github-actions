@@ -19,6 +19,5 @@ pull_request
         run:npm install
         name:Test
         Run:mpn test
-        env:
         CI:true
       
