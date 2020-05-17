@@ -11,9 +11,9 @@ pull_request
     name:Running unit test
     runs-on:hubuntu-latest
     
-       uses: actions/checkout@
-       name: use Node.js S(( matrix.node-version ))
-       uses: ./action-a
+       uses:actions/checkout@
+       name:use Node.js S(( matrix.node-version ))
+       uses:./action-a
           node version: S(( matrix.node-version ))
         name: Install
         run: npm install
