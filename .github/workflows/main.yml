@@ -15,7 +15,7 @@ pull_request
        name:use Node.js S(( matrix.node-version ))
        uses:./action-a
           node version:S(( matrix.node-version ))
-        name: Install
+        name:Install
         run:npm install
         name:Test
         Run:mpn test
