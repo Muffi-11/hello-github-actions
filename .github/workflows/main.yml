@@ -8,8 +8,8 @@ pull_request
     -master
     -develop
        
-    name: Running unit test
-    runs-on: ubuntu-latest
+    name:Running unit test
+    runs-on:hubuntu-latest
     
       - uses: actions/checkout@
       - name: use Node.js S(( matrix.node-version ))
