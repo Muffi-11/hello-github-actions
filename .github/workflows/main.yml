@@ -8,15 +8,12 @@ pull_request
     -master
     -develop
        
- 
-  Build:
     name: Running unit test
     runs-on: ubuntu-latest
-    steps:
+    
       - uses: actions/checkout@
       - name: use Node.js S(( matrix.node-version ))
        uses: ./action-a
-        with:
           node version: S(( matrix.node-version ))
         name: Install
         run: npm install
