@@ -1,22 +1,12 @@
 name: A workflow for my Hello World file
 
 on:
-pull_request
-
-  push
-  branches
-    -master
-    -develop
-       
-    name:Running unit test
-    runs-on:hubuntu-latest
-    
-       uses:actions/checkout@
-       name:use Node.js S(( matrix.node-version ))
-       uses:./action-a
-          node version:S(( matrix.node-version ))
-        name:Install
-        run:npm install
-        name:Test
-        Run:mpn test
-        CI:true
+  fork: make 
+  push:
+    tags: Hello world action
+    branches: ubuntu-latest
+    types:
+       actions/checkout@v1
+       ./action-a
+        with
+          MY_NAME "Mona"
