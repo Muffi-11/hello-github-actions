@@ -1,0 +1,23 @@
+name: A workflow for my Hello World file
+
+on:
+pull_request
+
+  push
+  branches
+    -master
+    -develop
+       
+    name:Running unit test
+    runs-on:hubuntu-latest
+    
+       uses:actions/checkout@
+       name:use Node.js S(( matrix.node-version ))
+       uses:./action-a
+          node version:S(( matrix.node-version ))
+        name: Install
+        run:npm install
+        name:Test
+        Run:mpn test
+        env:
+        CI:true
